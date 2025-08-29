@@ -1,0 +1,53 @@
+Développement du site de partage de recettes pour "Farine & Potiron" 
+
+Nous sommes "Farine & Potiron" un fabricant de farines spéciales.
+Pour développer et promouvoir notre gamme de produits, nous souhaitons mettre en place un site web
+ sur lequel les amateurs de nos farines pourront partager leurs recettes.
+
+Le site doit être accessible à tout le monde, qu'il soit client ou pas.
+Il permettra de se créer un compte en indiquant un pseudo, une adresse de courriel et 
+un mot de passe la connexion se faisant avec l'adresse ou le pseudo, au choix de l'utilisateur. 
+Nous ne souhaitons pas collecter plus d'informations, et seul le pseudo sera visible.
+Nous souhaitons que la création de compte soit sécurisée par un mécanisme anti-robots.
+
+Les recettes sont accessibles même sans compte, mais pour publier ou commenter des recettes, 
+il est nécessaire de se connecter
+
+Les utilisateurs connectés peuvent :
+modifier leur compte
+créer des recettes
+modifier les recettes qu'ils ont créées
+noter des recettes (j'aime, j'aime moins)
+commenter des recettes
+modifier les notes et commentaires qu'ils ont donnés
+Les commentaires, les notes, et les recette, sont affichées avec le pseudo et la date de dernière mise à jour.
+
+
+Une recette comporte :
+-un titre
+-les ingrédients (et leur quantité), en distinguant nos farines des autres ingrédients 
+(bien sûr, il faut inclure au moins une de nos farines)
+-la description détaillée
+-la durée estimée de réalisation
+-la difficulté (très facile, facile, difficile)
+
+
+La recherche doit pouvoir se faire selon différents critères, incluant la (ou les) farines utilisées.
+
+
+
+Nous fournissons une API pour accéder à notre catalogue :
+
+
+
+https://api.mywebecom.ovh/play/fep/catalogue.php : catalogue complet
+    Fourni un document au format JSON, avec la référence en index, et le libellé en valeur
+
+
+https://api.mywebecom.ovh/play/fep/catalogue.php?ref=xxx : detail d'un produit donné, de référence xxx
+    Fourni un document au format JSON, avec les éléments suivants :
+      - reference : référence du produit
+      - libelle : libellé simple du produit
+      - description : description détaillée
+
+L'accès à l'API est libre sans mot de passe.

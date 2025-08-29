@@ -1,0 +1,569 @@
+*{
+    margin: 0;
+    top: 0;
+    box-sizing: border-box;
+}
+
+/*Généralité*/
+body{
+    background-color: #dde2dc;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+li{
+    list-style: none;
+}
+
+.titre{
+    margin: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4e4035;
+}
+
+.primary-btn{
+    background-color: #a4c392;
+    color: #4e4035;
+    padding: 1rem;
+    border: 1px solid #4e4035;
+    border-radius: 10px;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.secundary-btn{
+    background-color: #d67f54;
+    color: #4e4035;
+    padding: 1rem;
+    border: 1px solid #4e4035;
+    border-radius: 10px;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.tertiary-btn{
+    background-color: #ffffff;
+    color: #4e4035;
+    padding: 0 0.5rem;
+    border: 1px solid #4e4035;
+    border-radius: 10px;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.danger-btn{
+    background-color: #c5998c;
+    color: #4e4035;
+    padding: 0 0.5rem;
+    border: 1px solid #4e4035;
+    border-radius: 10px;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.card-farine{
+    width: 150px;
+    height: 150px;
+    background-color: #c5998c;
+    border: 1px solid #4e4035;
+    color: #4e4035;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+    h4{
+        text-align: center;
+    }
+}
+
+.contenair{
+    width: 80%;
+    margin: auto;
+}
+
+/*Footer*/
+footer{
+    height: 50px;
+    background-color: #d67f54;
+    color: #4e4035;
+    display: flex;
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: center;
+    p{
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+/*Header*/
+header{
+    height: 50px;
+    background-color: #d67f54;
+    color: #4e4035;
+    display: flex;
+    align-items: center;
+
+    .contenair{
+        width: 100%;
+
+        .row{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 3rem;
+
+            nav{
+                ul{
+                    display: flex;
+                    justify-content: center;
+                    gap: 2rem;
+                    align-items: center;
+                }
+            }
+
+            .user-menu{
+                ul{
+                    display: flex;
+                    justify-content: center;
+                    gap: 2rem;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+/*Spécificité page formulaire_creation_compte et connexion*/
+.creation-compte, .connexion{
+    margin-top: 5rem;
+    .contenair{
+        width: 50%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .mail-verification{
+                display: none;
+            }
+
+            .primary-btn{
+                margin-top: 1rem;
+                align-self: center;
+            }
+        }
+    }
+}
+
+/*Spécificité page accueil*/
+.farines{
+    .contenair{
+        
+        .row{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            .contenair-farines{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+        }
+    }
+
+    .contenair-modal{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        transition: opacity 0.3s ease;
+
+        .cta-closed{
+            position: absolute;
+            top: 20px;
+            right: 30px;
+
+            .btn-closed {
+                background-color: #ff4d4d;
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+
+        .pop-farine{
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            background-color: #dde2dc;
+            padding: 1rem;
+
+            .header-popup, .footer-popup {
+                text-align: center;
+                font-size: 1.6rem;
+                margin-bottom: 1rem;
+            }
+
+            .body-popup {
+                padding: 2rem;
+                border-radius: 12px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.recette-une{
+    margin-top: 3rem;
+    .contenair{
+        
+        .row{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            a{
+                align-items: center;
+                justify-items: center;
+                .card-une{
+                    display: flex;
+                    gap: 2rem;
+                    background-color: #ffffff;
+                    padding: 3rem;
+                    border: #4e4035 1px solid;
+                    border-radius: 10px;
+                    align-items: center;
+                    .info{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+/*Spécificité page recherche*/
+.recherche-recette{
+    .contenair{
+        
+
+        .row{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                .select-farine{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+
+                    .contenair-check{
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 1rem;
+                    }
+                }
+
+                .autre-recherche{
+                    display: flex;
+                    justify-content: space-around;
+                }
+
+                .primary-btn{
+                    align-self: center;
+                }
+            }
+        }
+    }
+}
+
+.list-recettes{
+    margin-top: 2rem;
+    .contenair{
+        
+
+        .row{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    }
+}
+
+/*Spécificité page mon_espace*/
+.gestion-profil{
+    display: flex;
+    .contenair-modal{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        transition: opacity 0.3s ease;
+
+        .cta-closed{
+            position: absolute;
+            top: 20px;
+            right: 30px;
+
+            .btn-closed {
+                background-color: #ff4d4d;
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+
+        .pop-profil{
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            background-color: #dde2dc;
+            padding: 1rem;
+
+            
+        }
+    }
+
+    .secundary-btn{
+        position: fixed;
+        top: 5rem;
+        right: 2rem;
+    }
+}
+
+.recettes-utilisateur{
+    .row{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .align{
+            padding-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        table{
+            text-align: left;
+            width: 80%;
+            margin: auto;
+            line-height: 1.5rem;
+        }
+    }
+}
+
+.contributions-utilisateur{
+    .row{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-top: 3rem;
+
+        table{
+            text-align: left;
+            width: 80%;
+            margin: auto;
+            line-height: 1.5rem;
+        }
+    }
+}
+
+/*Spécificité page formulaire_recette*/
+.formulaire-recette{
+    .row{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-top: 3rem;
+
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            .label-align{
+                display: flex;
+                flex-direction: column;
+            }
+
+            select{
+                display: inline-block;
+                width: auto;
+                min-width: max-content;
+            }
+
+            #form-farine{
+                p{
+                    font-weight: bold;
+                }
+            }
+
+            .description{
+                width: 70%;
+                height: 200px;
+                border-radius: 10px;
+            }
+
+            .label-titre{
+                display: flex;
+                align-items: center;
+            }
+
+            .titre{
+                width: 50%;
+            }
+
+            .error-box{
+                color: #ff4d4d;
+                font-weight: bold;
+            }
+
+            .primary-btn{
+                align-self: center;
+            }
+        }
+    }
+}
+
+/*Spécificité page detail_recette*/
+.detail-recette{
+    .row{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-top: 2rem;
+
+        .header-recette{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .createur{
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+        }
+
+        .body-recette{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                h3{
+                    padding-bottom: 0.5rem;
+                }
+
+                .farines, .ingredients, .info{
+                    display: flex;
+                    flex-direction: column;
+                }
+        }
+        .footer-recette{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            p{
+                width: 80%;
+                margin: auto;
+            }
+        }
+    }
+}
+
+.contributions{
+    .row{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-top: 3rem;
+
+        .contenair-contribution{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            .card-contribution{
+                width: 80%;
+                margin: auto;
+                padding: 1rem;
+                border: #4e4035 solid 1px;
+                border-radius: 10px;
+
+                .card-header{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+            }
+        }
+
+        form{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border: #4e4035 solid 1px;
+            border-radius: 10px;
+        }
+    }
+}
