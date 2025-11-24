@@ -30,17 +30,6 @@ Ce projet, réalisé dans le cadre de l'examen de certification, propose un site
 
 ---
 
-## 🚀 Accès au site de test
-
-https://fep-chch.play.mywebecom.ovh/index.php
-
-👤 **Profils de démonstration** :  
-Pseudo: Cobra
-email: cobra@gmail.com
-mot de passe: 1234
-
----
-
 ## 📁 Documents disponibles
 
 - 🗂️ Cahier des charges "client"
